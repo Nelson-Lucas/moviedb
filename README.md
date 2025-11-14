@@ -1,18 +1,18 @@
 🎥 MovieDB
 Sistema de catálogo de filmes com gerenciamento de favoritos e visualização de detalhes.
 
-📘 Visão Geral do Projeto
+📘 Visão Geral
 A aplicação permite:
 
-Listagem de filmes populares por meio da API do TMDB
+✅ Listagem de filmes populares por meio da API do TMDB
 
-Visualização dos detalhes de cada filme: título, nota, sinopse, data de lançamento e gênero
+🎬 Visualização dos detalhes de cada filme: título, nota, sinopse, data de lançamento e gênero
 
-Adição e remoção de filmes na página de favoritos
+⭐ Adição e remoção de filmes na página de favoritos
 
-Página exclusiva para exibição dos filmes favoritados
+📂 Página exclusiva para exibição dos filmes favoritados
 
-Pesquisa livre de filmes através da barra de busca, permitindo verificar se seu filme preferido está disponível no catálogo
+🔎 Pesquisa livre de filmes através da barra de busca
 
 🛠️ Tecnologias Utilizadas
 Frontend
@@ -37,72 +37,50 @@ API
 
 TMDB (The Movie Database)
 
-📂 Arquitetura e Documentação
-A estrutura do projeto está organizada da seguinte forma:
-
+📂 Arquitetura do Projeto
 Código
 src/
-├── app/                # Configuração principal da aplicação (providers, rotas globais, inicialização)
-├── components/         # Componentes reutilizáveis (MovieCard, Header, etc)
-├── context/            # Contexto de favoritos
-├── hooks/              # Hooks personalizados (ex.: useFavorites, useFetchMovies)
-├── pages/              # Páginas principais (Home, MovieDetails, Favorites)
-├── services/           # Integração com TMDB API
-├── styles/             # Tema e estilos globais
-├── tests/              # Testes unitários e de integração
-└── App.tsx             # Roteamento principal da aplicação
-
-O projeto inclui:
-
-✅ Listagem paginada de filmes populares ⭐ Gerenciamento de favoritos com contexto e localStorage 🎬 Visualização detalhada de cada filme 🔁 Navegação fluida entre páginas 🧪 Testes cobrindo renderização, interação e estados
-
+├── app/          # Configuração principal da aplicação (providers, rotas globais, inicialização)
+├── components/   # Componentes reutilizáveis (MovieCard, Header, etc)
+├── context/      # Contexto de favoritos
+├── hooks/        # Hooks personalizados (useFavorites, useFetchMovies)
+├── pages/        # Páginas principais (Home, MovieDetails, Favorites, Search)
+├── services/     # Integração com TMDB API
+├── styles/       # Tema e estilos globais
+├── tests/        # Testes unitários e de integração
+└── App.tsx       # Roteamento principal da aplicação
 🔐 Integração com TMDB
-Para acessar os dados dos filmes, é necessário configurar a chave da API do TMDB:
+Para acessar os dados dos filmes, configure a chave da API:
 
-Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
+Crie um arquivo .env na raiz do projeto:
 
 env
 VITE_TMDB_API_KEY=your_tmdb_api_key
 VITE_TMDB_IMG_BASE=https://image.tmdb.org/t/p/w500
-A chave pode ser obtida gratuitamente em: TMDB API
+A chave pode ser obtida gratuitamente em TMDB API.
 
 📡 Endpoints Utilizados
 Método	Rota	Descrição
 GET	/movie/popular	Lista filmes populares
 GET	/movie/:id	Detalhes de um filme específico
-
-🧑‍💻 Como executar o projeto
-
+🧑‍💻 Como Executar
 📦 Instalação
 bash
-# Clone o repositório
 git clone https://github.com/seu-usuario/moviedb.git
-
-# Entre na pasta do projeto
 cd moviedb
-
-# Instale as dependências
 npm install
-
-▶️ Execução em Desenvolvimento
+▶️ Desenvolvimento
 bash
-# Inicie o servidor de desenvolvimento
 npm run dev
-A aplicação ficará disponível em: 👉 http://localhost:5173
+Acesse em: http://localhost:5173
 
 🏗️ Build de Produção
 bash
-# Gera os arquivos otimizados para produção
 npm run build
-
-# Visualiza o build localmente
 npm run preview
-
 🧪 Testes
 bash
-# Executa os testes unitários e de integração
 npm test
-
 Os testes cobrem:
 
 Renderização de páginas e componentes
@@ -114,15 +92,13 @@ Estados de loading e erro
 Mock de serviços e componentes
 
 🤝 Como Contribuir
-Se você deseja sugerir melhorias, corrigir bugs ou adicionar novas funcionalidades, siga os passos abaixo:
-
-Faça um fork do repositório: https://github.com/seu-usuario/moviedb
+Faça um fork do repositório: moviedb
 
 Clone o repositório forkado:
 
 bash
 git clone https://github.com/seu-usuario/moviedb.git
-Crie uma branch para sua contribuição:
+Crie uma branch:
 
 bash
 git checkout -b minha-contribuicao
@@ -137,12 +113,10 @@ git push origin minha-contribuicao
 Abra um Pull Request explicando as mudanças propostas.
 
 🌐 Hospedagem
-Este projeto foi deployado e está hospedado utilizando o GitHub Pages. 👉 Acesse em: https://Nelson-Lucas.github.io/moviedb
+Este projeto foi deployado e está hospedado utilizando GitHub Pages. 👉 Acesse em: https://Nelson-Lucas.github.io/moviedb
 
 📄 Licença
-Este projeto está licenciado sob a MIT License.
-
-Você pode:
+Este projeto está licenciado sob a MIT License. Você pode:
 
 Usar livremente o código
 
@@ -152,12 +126,17 @@ Compartilhar com outras pessoas
 
 Utilizar comercialmente
 
-Aviso: É necessário manter o aviso de copyright original ao redistribuir.
+⚠️ É necessário manter o aviso de copyright original.
 
 📌 Observações
-O Projeto foi construído durante uma semana(07/11 ao dia 13/11) por Nelson Lucas.
-Foi feito o uso de IA para fazer o README, porém não foi feito o uso para o código do projeto, apenas para dúvidas.
-É necessário configurar corretamente o arquivo .env com sua chave da API do TMDB para que a aplicação funcione.
-Os favoritos são armazenados localmente no navegador (localStorage), portanto não há persistência em servidor.
-A aplicação utiliza dados públicos da TMDB API, que podem variar conforme atualizações da plataforma.
-Os testes cobrem cenários principais de renderização, interação e estados de erro/carregamento, mas não substituem testes de integração completos com a API real.
+Projeto construído entre 07/11 e 13/11 por Nelson Lucas
+
+O README foi feito com auxílio de IA, mas o código é autoral
+
+É necessário configurar corretamente o arquivo .env com sua chave da API do TMDB
+
+Os favoritos são armazenados localmente no navegador (localStorage)
+
+A aplicação utiliza dados públicos da TMDB API, que podem variar conforme atualizações
+
+Os testes cobrem cenários principais de renderização, interação e estados de erro/carregamento
