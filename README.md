@@ -136,6 +136,9 @@ bash
 git push origin minha-contribuicao
 Abra um Pull Request explicando as mudanças propostas.
 
+🌐 Hospedagem
+Este projeto foi deployado e está hospedado utilizando o GitHub Pages. 👉 Acesse em: https://Nelson-Lucas.github.io/moviedb
+
 📄 Licença
 Este projeto está licenciado sob a MIT License.
 
